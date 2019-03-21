@@ -1,6 +1,7 @@
 package com.example.projet2019;
 
 
+import com.example.projet2019.activités.MainActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.example.projet2019.model.Magic;
@@ -57,3 +58,4 @@ public class MainController {
     }
 
 }
+// cash

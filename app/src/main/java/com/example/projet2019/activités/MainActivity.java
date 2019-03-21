@@ -1,5 +1,8 @@
-package com.example.projet2019;
+package com.example.projet2019.activités;
 
+import com.example.projet2019.MainController;
+import com.example.projet2019.MyAdapter;
+import com.example.projet2019.R;
 import com.example.projet2019.model.Magic;
 import android.app.Activity;
 import android.content.Intent;
@@ -45,9 +48,16 @@ public class MainActivity extends Activity {
             @Override
             public void onItemClick(Magic item) {
                 Intent intent = new Intent(MainActivity.this, BisActivity.class);
+               // Intent intent = new Intent(getApplicationContext(), BisActivity.class);
+                intent.putExtra("nom",item.getName());
+                //intent.putExtra("description", item.getDescription());
+                intent.putExtra("image", item.getImage());
                 MainActivity.this.startActivity(intent);
             }
         });
+
+
+
         recyclerView.setAdapter(mAdapter);
     }
 

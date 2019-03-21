@@ -1,7 +1,11 @@
 package com.example.projet2019;
 
 import com.example.projet2019.model.Magic;
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
+
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +21,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava> {
 
     private List<Magic> cards;
     private final OnItemClickListener listener;
+
 
     // construsteur //
     public MyAdapter(List<Magic> items, OnItemClickListener listener) {
@@ -52,6 +57,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava> {
             txtFooter = (TextView) v.findViewById(R.id.secondLine);
             image = v.findViewById(R.id.icon);
             image = (ImageView) itemView.findViewById(R.id.image);
+
         }
 
     }
@@ -73,6 +79,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava> {
         // - replace the contents of the view with that element
         final Magic currentMagicCard = cards.get(position);
         final String name = currentMagicCard.getName();
+
         holder.txtHeader.setText(name);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
