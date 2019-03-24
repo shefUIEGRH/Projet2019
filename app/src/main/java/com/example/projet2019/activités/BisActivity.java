@@ -1,5 +1,6 @@
 package com.example.projet2019.activités;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -21,13 +22,13 @@ public class BisActivity extends AppCompatActivity {
 
     private void getDetails(){
 
-        if(getIntent().hasExtra("nom")&& getIntent().hasExtra("détails")){
-            String nom = getIntent().getStringExtra("nom");
+        Intent intent = getIntent();
+            String nom = intent.getStringExtra("nom");
             String details = getIntent().getStringExtra("détails");
-            String imageApi = getIntent().getStringExtra("image");
+            String imageApi = intent.getStringExtra("image");
 
             recupDetails(nom, details, imageApi);
-        }
+
     }
 
     private void recupDetails(String nom, String details, String imageApi){
