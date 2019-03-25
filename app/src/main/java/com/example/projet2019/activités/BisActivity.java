@@ -24,14 +24,14 @@ public class BisActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
             String nom = intent.getStringExtra("nom");
-            String details = getIntent().getStringExtra("détails");
+            //String details = getIntent().getStringExtra("détails");
             String imageApi = intent.getStringExtra("image");
 
-            recupDetails(nom, details, imageApi);
+            recupDetails(nom, imageApi);
 
     }
 
-    private void recupDetails(String nom, String details, String imageApi){
+    private void recupDetails(String nom, String imageApi){
 
         TextView name = findViewById(R.id.Text2);
         name.setText(nom);

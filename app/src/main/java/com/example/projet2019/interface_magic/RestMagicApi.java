@@ -1,4 +1,4 @@
-package com.example.projet2019;
+package com.example.projet2019.interface_magic;
 
 import com.example.projet2019.model.RestMagic;
 

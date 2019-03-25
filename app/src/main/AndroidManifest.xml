@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".activités.MainActivity"/>
         <activity android:name=".activités.BisActivity" />
+
     </application>
 
 </manifest>

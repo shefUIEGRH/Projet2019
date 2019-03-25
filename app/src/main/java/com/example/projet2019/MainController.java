@@ -2,6 +2,7 @@ package com.example.projet2019;
 
 
 import com.example.projet2019.activités.MainActivity;
+import com.example.projet2019.interface_magic.RestMagicApi;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.example.projet2019.model.Magic;
@@ -23,11 +24,6 @@ public class MainController {
     }
 
     public void onStart(){
-
-        //Pour ceux qui veulent aller plus loin
-        //Singleton
-        //Pour ceux qui veulent aller encore plus loin
-        // Injection de dépendances
 
         Gson gson = new GsonBuilder()
                 .setLenient()
@@ -58,4 +54,3 @@ public class MainController {
     }
 
 }
-// cash
