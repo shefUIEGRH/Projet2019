@@ -48,16 +48,12 @@ public class MainActivity extends Activity {
             @Override
             public void onItemClick(Magic item) {
                 Intent intent = new Intent(MainActivity.this, BisActivity.class);
-               // Intent intent = new Intent(getApplicationContext(), BisActivity.class);
                 intent.putExtra("nom",item.getName());
                 //intent.putExtra("description", item.getDescription());
                 intent.putExtra("image", item.getImage());
                 MainActivity.this.startActivity(intent);
             }
         });
-
-
-
         recyclerView.setAdapter(mAdapter);
     }
 

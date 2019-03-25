@@ -23,7 +23,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava> {
     private final OnItemClickListener listener;
 
 
-    // construsteur //
+    // constructeur //
     public MyAdapter(List<Magic> items, OnItemClickListener listener) {
         this.cards = items;
         this.listener = listener;
