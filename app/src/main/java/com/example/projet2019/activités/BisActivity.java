@@ -27,19 +27,38 @@ public class BisActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
             String nom = intent.getStringExtra("nom");
-            //String details = getIntent().getStringExtra("détails");
+            String types = intent.getStringExtra("type");
+            String rarete = intent.getStringExtra("rarete");
+            String attaque = intent.getStringExtra("attaque");
+            String defense = intent.getStringExtra("defense");
+            String couleur = intent.getStringExtra("couleur");
             String imageApi = intent.getStringExtra("image");
 
-            recupDetails(nom, imageApi);
+            recupDetails(nom, types, rarete, attaque, defense, couleur, imageApi);
 
     }
 
-    private void recupDetails(String nom, String imageApi){
+    private void recupDetails(String nom, String types, String rarete, String attaque, String defense, String couleur, String imageApi){
 
-        TextView name = findViewById(R.id.Text2);
+        TextView name = findViewById(R.id.nom);
         name.setText(nom);
 
-        ImageView imageUrl = findViewById(R.id.View2);
+        TextView rarety = findViewById(R.id.rarete);
+        rarety.setText(rarete);
+
+        TextView power = findViewById(R.id.power);
+        power.setText(attaque);
+
+        TextView toughness = findViewById(R.id.toughness);
+        toughness.setText(defense);
+
+        TextView type = findViewById(R.id.type);
+        type.setText(types);
+
+        TextView color = findViewById(R.id.color);
+        color.setText(couleur);
+
+        ImageView imageUrl = findViewById(R.id.imagecarte);
         Picasso.get().load(imageApi).into(imageUrl);
 
     }

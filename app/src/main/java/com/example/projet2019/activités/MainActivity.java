@@ -49,7 +49,11 @@ public class MainActivity extends Activity {
             public void onItemClick(Magic item) {
                 Intent intent = new Intent(MainActivity.this, BisActivity.class);
                 intent.putExtra("nom",item.getName());
-                //intent.putExtra("description", item.getDescription());
+                intent.putExtra("type", item.getType());
+                intent.putExtra("rarete", item.getRarity());
+                intent.putExtra("attaque", item.getPower());
+                intent.putExtra("defense", item.getToughness());
+                intent.putExtra("couleur", item.getColors());
                 intent.putExtra("image", item.getImage());
                 MainActivity.this.startActivity(intent);
             }
