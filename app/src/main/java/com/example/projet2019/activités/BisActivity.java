@@ -43,16 +43,16 @@ public class BisActivity extends AppCompatActivity {
         name.setText(nom);
 
         TextView type = findViewById(R.id.type);
-        type.setText(types);
+        type.setText("Type : " + types);
 
         TextView rarety = findViewById(R.id.rarete);
-        rarety.setText(rarete);
+        rarety.setText("Rareté : " + rarete);
 
         TextView power = findViewById(R.id.power);
-        power.setText(attaque);
+        power.setText("Attaque : " + attaque);
 
        TextView toughness = findViewById(R.id.toughness);
-        toughness.setText(defense);
+        toughness.setText("Défense : " + defense);
 
         ImageView imageUrl = findViewById(R.id.imagecarte);
         Picasso.get().load(imageApi).into(imageUrl);
