@@ -5,11 +5,14 @@ import com.example.projet2019.MyAdapter;
 import com.example.projet2019.R;
 import com.example.projet2019.model.Magic;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import java.util.List;
 
@@ -21,6 +24,7 @@ public class MainActivity extends Activity {
     private RecyclerView.LayoutManager layoutManager;
     private MainController myController;
     private SwipeRefreshLayout swipeRefreshLayout;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +32,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.my_recycler_view);
 
-        myController = new MainController(this);
+        myController = new MainController(this, getSharedPreferences("key", Context.MODE_PRIVATE));
         myController.onStart();
 
     }
@@ -36,7 +40,7 @@ public class MainActivity extends Activity {
     private void doYourUpdate(){
         swipeRefreshLayout.setRefreshing(false);
     }
-
+  
     public void showList(List<Magic> input){
 
         recyclerView.setHasFixedSize(true);
