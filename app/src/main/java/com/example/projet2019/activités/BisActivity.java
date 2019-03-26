@@ -6,11 +6,14 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.projet2019.R;
+import com.master.glideimageview.GlideImageView;
 import com.squareup.picasso.Picasso;
 
 
 public class BisActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +40,7 @@ public class BisActivity extends AppCompatActivity {
         name.setText(nom);
 
         ImageView imageUrl = findViewById(R.id.View2);
-        Picasso.with(getApplicationContext()).load(imageApi).into(imageUrl);
+        Picasso.get().load(imageApi).into(imageUrl);
+
     }
 }
