@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
     private void doYourUpdate(){
         swipeRefreshLayout.setRefreshing(false);
     }
-  
+
     public void showList(List<Magic> input){
 
         recyclerView.setHasFixedSize(true);
