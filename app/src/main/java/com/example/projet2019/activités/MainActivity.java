@@ -53,7 +53,6 @@ public class MainActivity extends Activity {
                 intent.putExtra("rarete", item.getRarity());
                 intent.putExtra("attaque", item.getPower());
                 intent.putExtra("defense", item.getToughness());
-                intent.putExtra("couleur", item.getColors());
                 intent.putExtra("image", item.getImage());
                 MainActivity.this.startActivity(intent);
             }

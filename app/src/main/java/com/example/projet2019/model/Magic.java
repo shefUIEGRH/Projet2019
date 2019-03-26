@@ -11,7 +11,7 @@ public class Magic {
     private String rarity;
     private String power;
     private String toughness;
-    private String colors;
+
 
 
     public String getName(){
@@ -54,7 +54,7 @@ public class Magic {
         this.power = power;
     }
 
-    public String getToughness() {
+   public String getToughness() {
         return toughness;
     }
 
@@ -62,12 +62,5 @@ public class Magic {
         this.toughness = toughness;
     }
 
-    public String getColors() {
-        return colors;
-    }
-
-    public void setColors(String colors) {
-        this.colors = colors;
-    }
 }
 

@@ -31,17 +31,19 @@ public class BisActivity extends AppCompatActivity {
             String rarete = intent.getStringExtra("rarete");
             String attaque = intent.getStringExtra("attaque");
             String defense = intent.getStringExtra("defense");
-            String couleur = intent.getStringExtra("couleur");
             String imageApi = intent.getStringExtra("image");
 
-            recupDetails(nom, types, rarete, attaque, defense, couleur, imageApi);
+            recupDetails(nom, types, rarete, attaque, defense, imageApi);
 
     }
 
-    private void recupDetails(String nom, String types, String rarete, String attaque, String defense, String couleur, String imageApi){
+    private void recupDetails(String nom, String types, String rarete, String attaque, String defense, String imageApi){
 
         TextView name = findViewById(R.id.nom);
         name.setText(nom);
+
+        TextView type = findViewById(R.id.type);
+        type.setText(types);
 
         TextView rarety = findViewById(R.id.rarete);
         rarety.setText(rarete);
@@ -49,14 +51,8 @@ public class BisActivity extends AppCompatActivity {
         TextView power = findViewById(R.id.power);
         power.setText(attaque);
 
-        TextView toughness = findViewById(R.id.toughness);
+       TextView toughness = findViewById(R.id.toughness);
         toughness.setText(defense);
-
-        TextView type = findViewById(R.id.type);
-        type.setText(types);
-
-        TextView color = findViewById(R.id.color);
-        color.setText(couleur);
 
         ImageView imageUrl = findViewById(R.id.imagecarte);
         Picasso.get().load(imageApi).into(imageUrl);
